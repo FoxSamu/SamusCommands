@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "rfx-cmd",
+	"version": "${version}",
+	"name": "Samū's Commands",
+	"description": "Some simple commands we all know but aren't in Minecraft",
+	"authors": [
+		"Samū"
+	],
+	"contact": {
+		"homepage": "https://runefox.dev/",
+		"sources": "https://github.com/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rfx-cmd/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+            "dev.runefox.mc.cmd.CommandsMod"
+		],
+		"client": [
+			"dev.runefox.mc.cmd.CommandsModClient"
+		]
+	},
+	"mixins": [
+		"rfx-cmd.mixins.json",
+		{
+			"config": "rfx-cmd.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
