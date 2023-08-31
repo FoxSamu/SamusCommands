@@ -108,6 +108,10 @@
     "gamerule.tpaMode.tpa": "TPA",
     "gamerule.tpaMode.tpc": "TPC",
     "gamerule.tpaMode.both": "Beide",
+    "gamerule.tpaRequiresSameTeam": "Teleportatie alleen binnen team",
+    "gamerule.tpaRequiresSameTeam.description": "Wanneer ingeschakeld kunnen spelers alleen naar spelers in hetzelfde team teleporteren.",
+    "gamerule.maxNotes": "Maximum aantal notities",
+    "gamerule.maxNotes.description": "Aantal notities die spelers maximaal kunnen maken.",
 
     "message.rfx-cmd.not_synced": "De server heeft Samū's Commands niet",
     "message.rfx-cmd.homes_not_allowed": "Huizen zijn uitgeschakeld op deze server",
@@ -118,5 +122,8 @@
 
     "key.rfx-cmd.home": "Teleporteer naar thuis",
     "key.rfx-cmd.sethome": "Stel thuis in",
-    "key.rfx-cmd.categories.homes": "Huizen"
+    "key.rfx-cmd.categories.homes": "Huizen",
+
+    "modmenu.nameTranslation.modmenu": "Samū's Commando's",
+    "modmenu.descriptionTranslation.modmenu": "A paar simpele features voor Minecraft."
 }

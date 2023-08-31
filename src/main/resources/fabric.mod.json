@@ -3,7 +3,7 @@
 	"id": "rfx-cmd",
 	"version": "${version}",
 	"name": "Samū's Commands",
-	"description": "Some simple commands we all know but aren't in Minecraft",
+	"description": "A few simple features to Minecraft.",
 	"authors": [
 		"Samū"
 	],

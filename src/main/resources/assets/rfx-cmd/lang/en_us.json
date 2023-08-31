@@ -68,7 +68,6 @@
 
     "commands.rfx-cmd.tpaccept.no_such_request": "There is no active request from %s.",
     "commands.rfx-cmd.tpaccept.no_requests": "There are no active requests.",
-    "commands.rfx-cmd.tpaccept.wrong_team": "%s is not in your team.",
     "commands.rfx-cmd.tpaccept.success.specific": "Accepted request from %s.",
     "commands.rfx-cmd.tpaccept.success.all": "Accepted all requests.",
 
@@ -111,6 +110,8 @@
     "gamerule.tpaMode.tpa": "TPA",
     "gamerule.tpaMode.tpc": "TPC",
     "gamerule.tpaMode.both": "Both",
+    "gamerule.maxNotes": "Maximum Amount Of Notes",
+    "gamerule.maxNotes.description": "Set the maximum number of notes players can make with /note and /notes.",
 
     "message.rfx-cmd.not_synced": "The server does not have Samū's Commands",
     "message.rfx-cmd.homes_not_allowed": "Homes are disabled on this server",
@@ -121,5 +122,8 @@
 
     "key.rfx-cmd.home": "Teleport Home",
     "key.rfx-cmd.sethome": "Set Home",
-    "key.rfx-cmd.categories.homes": "Homes"
+    "key.rfx-cmd.categories.homes": "Homes",
+
+    "modmenu.nameTranslation.modmenu": "Samū's Commands",
+    "modmenu.descriptionTranslation.modmenu": "A few simple features to Minecraft."
 }
