@@ -86,6 +86,37 @@ Since notes are stored on the server side in the player data, a gamerule exists 
 
 A useful feature: note lines printed in chat can be clicked upon to copy a note line to the clipboard.
 
+## Points of interests
+In addition to the home commands, the mod provides points of interests, which are like homes shared across all players. Unless configured otherwise, only admins can set these. All players can teleport to them by default. All commands targeting a single POI can have an optional name as argument to set a named POI. The main POI has no name and must be referred to by not providing the name.
+- `/poi` teleports to a POI set by `/setpoi`
+- `/setpoi` sets a POI to the current location
+- `/delpoi` deletes a POI
+- `/getpoi` gets a POI's coordinates, or just whether the POI exists when the gamerule `reducedDebugInfo` is set to `true`
+- `/pois` lists all POIs, and their coordinates if gamerules allow
+- `/clearpois` removes all named POIs, it keeps the main one
+- `/clearpois true` removes all POIs, including the main one
+
+Points of interest can be controlled by gamerules:
+- `/gamerule allowPoi true|false` (default `true`) enables or disables all POI commands. When `false`, only operators have access to POI commands. This gamerule is also not effective to players with cheats enabled in singleplayer worlds.
+- `/gamerule allCanSetPoi true|false` (default `false`) enables or disables POI modification commands. When `false`, only operators can change, add and remove POIs. When `true`, all players can edit POIs.
+- `/gamerule hidePoiInfo true|false` (default `false`) enables or disables POI querying commands. When `false`, only operators have access to the POI query commands (`/pois`, `/getpoi`). This does not disable the `/poi` teleportation command.
+
+POIs, like homes, work from any distance and through different dimensions. A POI set in the Nether allows players in the Overworld to teleport to that POI in the Nether instantly.
+
+## Last death
+The mod has a feature to teleport players to where they last died. This can be done in two ways:
+- Using `/death`
+- By clicking with a recovery compass (which requires players to obtain such a compass)
+
+A gamerule can control this ability:
+- `/gamerule deathTp off|command|compass|both` sets how the player can teleport to where they last died.
+  - When `off`, the feature is disabled.
+  - When `command`, the feature is accessible through commands only, and players don't need a recovery compass.
+  - When `compass`, the feature is accessible through the recovery compass only.
+  - When `both`, the feature is accessible through both the command and the recovery compass, so players don't necessarily need a recovery compass but they can still use it.
+  
+  For operators, this gamerule has no effect: they can use the command and the recovery compass limitlessly.
+
 
 # Client Features
 
@@ -98,9 +129,7 @@ You can bind keys to set and teleport to your main home.
 # Planned Features
 
 - A home manager: a visual interface showing your homes where you can manage them.
-- Points of interest: shared locations that players can teleport to.
 - Lodestone teleportation: allows players to click with a lode compass to teleport to the lodestone it's associated with.
-- Death teleportation: allows players to click with a recovery compass to teleport to their last death.
 
 # License
 
