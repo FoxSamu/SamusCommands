@@ -11,7 +11,10 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.storage.LevelStorageSource;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -35,7 +38,7 @@ public class PoiManager {
             CompoundTag tag = new CompoundTag();
             toTag(tag);
             NbtIo.write(tag, dos);
-            CommandsMod.LOGGER.info("Saved poi data");
+            CommandsMod.LOGGER.info("Saved POI data");
         } catch (IOException exc) {
             CommandsMod.LOGGER.error("Failed to write POI data", exc);
         }
@@ -48,7 +51,7 @@ public class PoiManager {
                 SnbtPrinterTagVisitor visitor = new SnbtPrinterTagVisitor();
                 wr.append(visitor.visit(tag));
 
-                CommandsMod.LOGGER.info("Saved poi snbt");
+                CommandsMod.LOGGER.info("Saved POI snbt");
             } catch (IOException exc) {
                 CommandsMod.LOGGER.error("Failed to write POI data", exc);
             }
@@ -57,14 +60,16 @@ public class PoiManager {
 
     public void load(LevelStorageSource.LevelStorageAccess storageSource) {
         Path path = storageSource.getLevelPath(LevelResource.ROOT).resolve("rfx-poi.dat");
+        if (!Files.exists(path)) {
+            CommandsMod.LOGGER.info("No POI data yet");
+        }
+
         try (DataInputStream dos = new DataInputStream(Files.newInputStream(path))) {
             CompoundTag tag = NbtIo.read(dos);
             fromTag(tag);
-            CommandsMod.LOGGER.info("Loaded poi data");
-        } catch (FileNotFoundException exc) {
-            CommandsMod.LOGGER.info("POI data not found, creating...");
+            CommandsMod.LOGGER.info("Loaded POI data");
         } catch (IOException exc) {
-            CommandsMod.LOGGER.error("Failed to write POI data", exc);
+            CommandsMod.LOGGER.error("Failed to load POI data", exc);
         }
     }
 
