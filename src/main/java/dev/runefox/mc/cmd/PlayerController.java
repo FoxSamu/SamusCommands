@@ -4,12 +4,17 @@ import com.mojang.authlib.GameProfile;
 import dev.runefox.mc.cmd.cmd.ModCommands;
 import dev.runefox.mc.cmd.net.ServerHandler;
 import dev.runefox.mc.cmd.net.ServerHandlerImpl;
+import dev.runefox.mc.cmd.poi.PoiManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.GlobalPos;
 import net.minecraft.core.UUIDUtil;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.*;
-import net.minecraft.network.chat.*;
+import net.minecraft.network.chat.ClickEvent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.HoverEvent;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
@@ -48,7 +53,7 @@ public class PlayerController implements ModPlayer {
         this.netHandler = new ServerHandlerImpl(player, this);
     }
 
-    private TeleportPos rfxCalcHomePos() {
+    private TeleportPos calcHomePos() {
         BlockPos bpos = player.blockPosition();
         ServerLevel level = player.serverLevel();
         return new TeleportPos(bpos, level.dimension().location(), player.getYRot(), player.getXRot());
@@ -70,13 +75,31 @@ public class PlayerController implements ModPlayer {
     }
 
     @Override
+    public TeleportPos here() {
+        return calcHomePos();
+    }
+
+    @Override
+    public boolean teleport(TeleportPos pos) {
+        MinecraftServer server = player.getServer();
+        ServerLevel level = server.getLevel(ResourceKey.create(Registries.DIMENSION, pos.dimension()));
+        if (level == null)
+            return false;
+
+        BlockPos bpos = pos.pos();
+
+        player.teleportTo(level, bpos.getX() + 0.5, bpos.getY(), bpos.getZ() + 0.5, pos.yrot(), pos.xrot());
+        return true;
+    }
+
+    @Override
     public void setHome(String name, TeleportPos pos) {
         homes.put(name, pos);
     }
 
     @Override
     public void setHome(String name) {
-        setHome(name, rfxCalcHomePos());
+        setHome(name, calcHomePos());
     }
 
     @Override
@@ -86,7 +109,7 @@ public class PlayerController implements ModPlayer {
 
     @Override
     public void setHome() {
-        setHome(null, rfxCalcHomePos());
+        setHome(null, calcHomePos());
     }
 
     @Override
@@ -105,15 +128,7 @@ public class PlayerController implements ModPlayer {
         if (pos == null)
             return false;
 
-        MinecraftServer server = player.getServer();
-        ServerLevel level = server.getLevel(ResourceKey.create(Registries.DIMENSION, pos.dimension()));
-        if (level == null)
-            return false;
-
-        BlockPos bpos = pos.pos();
-
-        player.teleportTo(level, bpos.getX() + 0.5, bpos.getY(), bpos.getZ() + 0.5, pos.yrot(), pos.xrot());
-        return true;
+        return teleport(pos);
     }
 
     @Override
@@ -293,7 +308,6 @@ public class PlayerController implements ModPlayer {
 
     @Override
     public boolean acceptTpRequest(ServerPlayer source) {
-        System.out.println(source.getGameProfile().getName());
         TeleportRequest request = tpRequests.remove(source);
         if (request == null) return false;
         accept(request);
@@ -487,6 +501,45 @@ public class PlayerController implements ModPlayer {
     @Override
     public List<String> notes() {
         return new ArrayList<>(notes);
+    }
+
+    @Override
+    public TeleportPos lastDeath() {
+        Optional<GlobalPos> death = player.getLastDeathLocation();
+        if (death.isEmpty()) return null;
+
+        GlobalPos pos = death.get();
+        return new TeleportPos(
+            pos.pos(),
+            pos.dimension().location(),
+            player.getYRot(),
+            player.getXRot()
+        );
+    }
+
+    @Override
+    public boolean teleportToLastDeathPos() {
+        TeleportPos pos = lastDeath();
+        if (lastDeath() == null)
+            return false;
+
+        return teleport(pos);
+    }
+
+    @Override
+    public boolean teleportToPoi(String name) {
+        PoiManager poiManager = PoiManager.of(player.server);
+        TeleportPos pos = poiManager.getPoi(name);
+        if (pos == null) return false;
+        return teleport(pos);
+    }
+
+    @Override
+    public boolean teleportToPoi() {
+        PoiManager poiManager = PoiManager.of(player.server);
+        TeleportPos pos = poiManager.getPoi();
+        if (pos == null) return false;
+        return teleport(pos);
     }
 
     public void tick() {

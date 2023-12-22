@@ -93,6 +93,55 @@
     "commands.rfx-cmd.notes.too_much": "Je hebt je limiet van %s notities bereikt.",
     "commands.rfx-cmd.notes.too_long": "Je notitie is te lang.",
 
+    "commands.rfx-cmd.death.no_death": "Je bent nog niet gestorven.",
+    "commands.rfx-cmd.death.unknown_dimension": "Je bent gestorven in een dimensie die niet meer bestaat.",
+    "commands.rfx-cmd.death.ok": "Hier ben je voor het laatst gestorven.",
+
+    "commands.rfx-cmd.poi.success.main": "Welkom op deze locatie!",
+    "commands.rfx-cmd.poi.success.named": "Welkom op de locatie %s!",
+    "commands.rfx-cmd.poi.not_found.main": "Er is geen %s.",
+    "commands.rfx-cmd.poi.not_found.named": "Er is geen locatie met de naam %s.",
+
+    "commands.rfx-cmd.setpoi.success.main": "De %s is ingesteld.",
+    "commands.rfx-cmd.setpoi.success.named": "De locatie met de naam %s is ingesteld.",
+
+    "commands.rfx-cmd.setpoiat.success.main": "De %s is ingesteld.",
+    "commands.rfx-cmd.setpoiat.success.named": "De locatie met de naam %s is ingesteld.",
+
+    "commands.rfx-cmd.delpoi.success.main": "De %s is verwijderd.",
+    "commands.rfx-cmd.delpoi.success.named": "De locatie met de naam %s is verwijderd.",
+    "commands.rfx-cmd.delpoi.not_found.main": "Er is geen %s.",
+    "commands.rfx-cmd.delpoi.not_found.named": "Er is geen locatie met de naam %s.",
+
+    "commands.rfx-cmd.pois.none": "Er zijn geen gedeelde locaties.",
+    "commands.rfx-cmd.pois.main": "Er is een %s op %s.",
+    "commands.rfx-cmd.pois.main.reduced": "Er is een %s.",
+    "commands.rfx-cmd.pois.named.1": "Er is 1 benoemde locatie:",
+    "commands.rfx-cmd.pois.named.x": "Er zijn %s benoemde locatie:",
+    "commands.rfx-cmd.pois.named.list": " - %s op %s",
+    "commands.rfx-cmd.pois.named.reduced": " - %s",
+
+    "commands.rfx-cmd.clearpois.none": "Geen locaties verwijderd.",
+    "commands.rfx-cmd.clearpois.1": "1 locatie verwijderd.",
+    "commands.rfx-cmd.clearpois.x": "%s locaties verwijderd.",
+
+    "commands.rfx-cmd.getpoi.success.main": "De %s is op de coordinaten %s.",
+    "commands.rfx-cmd.getpoi.success.named": "De locatie met de naam %s op de coordinaten %s.",
+    "commands.rfx-cmd.getpoi.reduced.main": "Er is een %s.",
+    "commands.rfx-cmd.getpoi.reduced.named": "Er is een locatie met de naam %s.",
+    "commands.rfx-cmd.getpoi.not_found.main": "Er is geen %s.",
+    "commands.rfx-cmd.getpoi.not_found.named": "Er is geen locatie met de naam %s.",
+
+    "commands.rfx-cmd.poi.click_to_teleport": "Klik om te teleporteren.",
+    "commands.rfx-cmd.poi.click_to_set": "Deze locatie bestaat niet. Klik om in te stellen.",
+    "commands.rfx-cmd.poi.main_home": "hoofdlocatie",
+    "commands.rfx-cmd.poi.main_home.caps": "Hoofdlocatie",
+    "commands.rfx-cmd.poi.dimension": " in %s",
+
+
+
+
+
     "gamerule.allowHomeTp": "Sta huismarkering toe",
     "gamerule.allowHomeTp.description": "Sta spelers toe om commando's als /home en /sethome te gebruiken om huizen te markeren en er naartoe te teleporteren.",
     "gamerule.maxHomes": "Maximum aantal huizen",
@@ -112,6 +161,20 @@
     "gamerule.tpaRequiresSameTeam.description": "Wanneer ingeschakeld kunnen spelers alleen naar spelers in hetzelfde team teleporteren.",
     "gamerule.maxNotes": "Maximum aantal notities",
     "gamerule.maxNotes.description": "Aantal notities die spelers maximaal kunnen maken.",
+    "gamerule.deathTp": "Grafteleportatie-modus",
+    "gamerule.deathTp.description": "Stelt in hoe spelers naar de plek waar ze het laatst gestorven zijn kunnen teleporteren.\n - Uit: Niet toegestaan.\n - Commando: staat het /death commando toe, geen kompas nodig.\n - Kompas: staat klikken met een herstelkompas toe.\n - Beide: staat zowel het kompas als /death toe.",
+    "gamerule.deathTp.off": "Uit",
+    "gamerule.deathTp.command": "Commando",
+    "gamerule.deathTp.compass": "Kompas",
+    "gamerule.deathTp.both": "Beide",
+    "gamerule.allowPoi": "Sta gedeelde locaties toe",
+    "gamerule.allowPoi.description": "Sta spelers toe om naar gedeelde locaties te teleporteren.",
+    "gamerule.allCanSetPoi": "Iedereen kan locaties instellen",
+    "gamerule.allCanSetPoi.description": "Sta alle spelers toe om gedeelde locaties aan te passen, toe te voegen en te verwijderen. Wanneer uit, kunnen alleen admins dit doen.",
+    "gamerule.hidePoiInfo": "Verberg locatie-info",
+    "gamerule.hidePoiInfo.description": "Verberg alle informatie over gedeelde locaties van spelers. Wanneer aan, kunnen alleen admins de informatie over gedeelde locaties opvragen.",
+
+    "gamerule.category.rfx-cmd.main": "Samū's Commando's",
 
     "message.rfx-cmd.not_synced": "De server heeft Samū's Commands niet",
     "message.rfx-cmd.homes_not_allowed": "Huizen zijn uitgeschakeld op deze server",

@@ -28,4 +28,28 @@ public interface CommandExceptions {
     public static final DynamicCommandExceptionType GET_NO_NAMED_HOME = new DynamicCommandExceptionType(
         name -> ModCommands.message("gethome", "not_found.named", HomeCommand.deadHomeName(name + ""))
     );
+
+
+
+
+    public static final SimpleCommandExceptionType NO_MAIN_POI = new SimpleCommandExceptionType(
+        ModCommands.message("poi", "not_found.main", PoiCommand.deadMainName(false))
+    );
+    public static final DynamicCommandExceptionType NO_NAMED_POI = new DynamicCommandExceptionType(
+        name -> ModCommands.message("poi", "not_found.named", PoiCommand.deadPoiName(name + ""))
+    );
+
+    public static final SimpleCommandExceptionType DELETE_NO_MAIN_POI = new SimpleCommandExceptionType(
+        ModCommands.message("delpoi", "not_found.main", PoiCommand.deadMainName(false))
+    );
+    public static final DynamicCommandExceptionType DELETE_NO_NAMED_POI = new DynamicCommandExceptionType(
+        name -> ModCommands.message("delpoi", "not_found.named", PoiCommand.deadPoiName(name + ""))
+    );
+
+    public static final SimpleCommandExceptionType GET_NO_MAIN_POI = new SimpleCommandExceptionType(
+        ModCommands.message("getpoi", "not_found.main", PoiCommand.deadMainName(false))
+    );
+    public static final DynamicCommandExceptionType GET_NO_NAMED_POI = new DynamicCommandExceptionType(
+        name -> ModCommands.message("getpoi", "not_found.named", PoiCommand.deadPoiName(name + ""))
+    );
 }

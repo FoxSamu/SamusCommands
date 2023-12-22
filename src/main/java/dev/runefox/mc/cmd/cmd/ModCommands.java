@@ -29,6 +29,16 @@ public class ModCommands {
 
         new NoteCommand("note").register(dispatcher);
         new NotesCommand("notes").register(dispatcher);
+
+        new DeathCommand("death").register(dispatcher);
+
+        new PoiCommand("poi").register(dispatcher);
+        new SetPoiCommand("setpoi").register(dispatcher);
+        // new SetPoiAtCommand("setpoiat").register(dispatcher); // TODO make this command better
+        new GetPoiCommand("getpoi").register(dispatcher);
+        new DelPoiCommand("delpoi").register(dispatcher);
+        new PoisCommand("pois").register(dispatcher);
+        new ClearPoisCommand("clearpois").register(dispatcher);
     }
 
     public static <T extends GameRules.Value<T>> Predicate<CommandSourceStack> requireGameRule(GameRules.Key<T> key, Predicate<T> pred) {
@@ -37,6 +47,10 @@ public class ModCommands {
 
     public static Predicate<CommandSourceStack> requireTrue(GameRules.Key<GameRules.BooleanValue> key) {
         return requireGameRule(key, GameRules.BooleanValue::get);
+    }
+
+    public static Predicate<CommandSourceStack> requireFalse(GameRules.Key<GameRules.BooleanValue> key) {
+        return requireGameRule(key, GameRules.BooleanValue::get).negate();
     }
 
     public static MutableComponent message(String command, String key) {

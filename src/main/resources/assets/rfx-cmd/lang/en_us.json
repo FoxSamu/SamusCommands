@@ -93,6 +93,55 @@
     "commands.rfx-cmd.notes.too_much": "You reached your limit of %s notes.",
     "commands.rfx-cmd.notes.too_long": "Your note is too long.",
 
+    "commands.rfx-cmd.death.no_death": "You have not died yet.",
+    "commands.rfx-cmd.death.unknown_dimension": "You have died in a dimension that no longer exists.",
+    "commands.rfx-cmd.death.ok": "Here is where you died last.",
+
+    "commands.rfx-cmd.poi.success.main": "Welcome at this point of interest!",
+    "commands.rfx-cmd.poi.success.named": "Welcome at %s!",
+    "commands.rfx-cmd.poi.not_found.main": "There is no %s.",
+    "commands.rfx-cmd.poi.not_found.named": "There is no POI named %s.",
+
+    "commands.rfx-cmd.setpoi.success.main": "The %s was set.",
+    "commands.rfx-cmd.setpoi.success.named": "The point of interest named %s was set.",
+
+    "commands.rfx-cmd.setpoiat.success.main": "The %s was set.",
+    "commands.rfx-cmd.setpoiat.success.named": "The point of interest named %s was set.",
+
+    "commands.rfx-cmd.delpoi.success.main": "Deleted %s.",
+    "commands.rfx-cmd.delpoi.success.named": "Deleted point of interest named %s.",
+    "commands.rfx-cmd.delpoi.not_found.main": "There is no %s.",
+    "commands.rfx-cmd.delpoi.not_found.named": "There is no POI named %s.",
+
+    "commands.rfx-cmd.pois.none": "There are no points of interest.",
+    "commands.rfx-cmd.pois.main": "There is a %s at %s.",
+    "commands.rfx-cmd.pois.main.reduced": "There is a %s.",
+    "commands.rfx-cmd.pois.named.1": "There is 1 named point of interest:",
+    "commands.rfx-cmd.pois.named.x": "There are %s named points of interest:",
+    "commands.rfx-cmd.pois.named.list": " - %s at %s",
+    "commands.rfx-cmd.pois.named.reduced": " - %s",
+
+    "commands.rfx-cmd.clearpois.none": "No points of interest removed.",
+    "commands.rfx-cmd.clearpois.1": "1 point of interest removed.",
+    "commands.rfx-cmd.clearpois.x": "%s points of interest removed.",
+
+    "commands.rfx-cmd.getpoi.success.main": "The %s is at %s.",
+    "commands.rfx-cmd.getpoi.success.named": "Point of interest named %s is at %s.",
+    "commands.rfx-cmd.getpoi.reduced.main": "There is a %s.",
+    "commands.rfx-cmd.getpoi.reduced.named": "There is a point of interest named %s.",
+    "commands.rfx-cmd.getpoi.not_found.main": "There is no %s.",
+    "commands.rfx-cmd.getpoi.not_found.named": "There is no point of interest named %s.",
+
+    "commands.rfx-cmd.poi.click_to_teleport": "Click to teleport.",
+    "commands.rfx-cmd.poi.click_to_set": "This point of interest does not exist. Click to set.",
+    "commands.rfx-cmd.poi.main_poi": "main point of interest",
+    "commands.rfx-cmd.poi.main_poi.caps": "Main Point of Interest",
+    "commands.rfx-cmd.poi.dimension": " in %s",
+
+
+
+
+
     "gamerule.allowHomeTp": "Allow Home Teleportation",
     "gamerule.allowHomeTp.description": "Allow players to use commands like /home and /sethome to set and teleport to homes.",
     "gamerule.maxHomes": "Maximum Number of Homes",
@@ -112,6 +161,20 @@
     "gamerule.tpaMode.both": "Both",
     "gamerule.maxNotes": "Maximum Amount Of Notes",
     "gamerule.maxNotes.description": "Set the maximum number of notes players can make with /note and /notes.",
+    "gamerule.deathTp": "Death Teleportation Mode",
+    "gamerule.deathTp.description": "Sets how players can teleport to their last death location.\n - Off: Disabled.\n - Command: allows /death command, no compass needed.\n - Compass: allows clicking with a recovery compass.\n - Both: allows both a compass and /death.",
+    "gamerule.deathTp.off": "Off",
+    "gamerule.deathTp.command": "Command",
+    "gamerule.deathTp.compass": "Compass",
+    "gamerule.deathTp.both": "Both",
+    "gamerule.allowPoi": "Allow POIs",
+    "gamerule.allowPoi.description": "Allows players to teleport to shared points of interest.",
+    "gamerule.allCanSetPoi": "Everyone can set POIs",
+    "gamerule.allCanSetPoi.description": "Allows all players to configure shared points of interest. If disabled, only admins can set POIs.",
+    "gamerule.hidePoiInfo": "Hide POI info",
+    "gamerule.hidePoiInfo.description": "Hides POI info from players. If enabled, only admins can retrieve POI info.",
+
+    "gamerule.category.rfx-cmd.main": "Samū's Commands",
 
     "message.rfx-cmd.not_synced": "The server does not have Samū's Commands",
     "message.rfx-cmd.homes_not_allowed": "Homes are disabled on this server",

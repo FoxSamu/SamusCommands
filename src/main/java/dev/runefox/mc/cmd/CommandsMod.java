@@ -1,20 +1,12 @@
 package dev.runefox.mc.cmd;
 
-import com.mojang.brigadier.CommandDispatcher;
 import dev.runefox.mc.cmd.cmd.ModCommands;
 import dev.runefox.mc.cmd.net.ClientPingPacket;
 import dev.runefox.mc.cmd.net.Network;
+import dev.runefox.mc.cmd.poi.PoiManager;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
-import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
-import net.minecraft.commands.CommandBuildContext;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.network.ServerGamePacketListenerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,6 +27,8 @@ public class CommandsMod implements ModInitializer {
 		FallbackLanguage.load();
 		ModGameRules.init();
 		Network.init();
+		ItemClickHandler.init();
+		PoiManager.init();
 
 		CommandRegistrationCallback.EVENT.register((dispatcher, regs, environment) -> ModCommands.init(dispatcher));
 

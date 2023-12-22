@@ -93,6 +93,54 @@
     "commands.rfx-cmd.notes.too_much": "%s IZ ENUF SECRUTZ",
     "commands.rfx-cmd.notes.too_long": "Ur secrut is 2 much",
 
+    "commands.rfx-cmd.death.no_death": "U haz no deth!",
+    "commands.rfx-cmd.death.unknown_dimension": "U haz deth in a dimenshun dats gun",
+    "commands.rfx-cmd.death.ok": "Here u deth",
+
+    "commands.rfx-cmd.poi.success.main": "WELCOM BAK IN SHARED TERITOREH",
+    "commands.rfx-cmd.poi.success.named": "Welcom bak at %s",
+    "commands.rfx-cmd.poi.not_found.main": "NO %s IZ",
+    "commands.rfx-cmd.poi.not_found.named": "NO SHARED TERITOREH %s IZ",
+
+    "commands.rfx-cmd.setpoi.success.main": "Da %s now iz",
+    "commands.rfx-cmd.setpoi.success.named": "%s iz now shared teritoreh",
+
+    "commands.rfx-cmd.setpoiat.success.main": "Da %s now iz",
+    "commands.rfx-cmd.setpoiat.success.named": "%s iz now shared teritoreh",
+
+    "commands.rfx-cmd.delpoi.success.main": "gived up %s",
+    "commands.rfx-cmd.delpoi.success.named": "gived up shared teritoreh %s",
+    "commands.rfx-cmd.delpoi.not_found.main": "NO %s IZ",
+    "commands.rfx-cmd.delpoi.not_found.named": "NO SHARED TERITOREH %s IZ",
+
+    "commands.rfx-cmd.pois.none": "Shared teritoreh iz not",
+    "commands.rfx-cmd.pois.main": "Haz a %s at %s",
+    "commands.rfx-cmd.pois.main.reduced": "Haz a %s",
+    "commands.rfx-cmd.pois.named.1": "Haz 1 named shared teritoreh:",
+    "commands.rfx-cmd.pois.named.x": "Haz %s named shared teritorehs:",
+    "commands.rfx-cmd.pois.named.list": " - %2$s iz %1$s",
+    "commands.rfx-cmd.pois.named.reduced": " - %s",
+
+    "commands.rfx-cmd.clearpois.none": "No shared teritoreh gived up",
+    "commands.rfx-cmd.clearpois.1": "1 shared teritoreh gived up",
+    "commands.rfx-cmd.clearpois.x": "%s shared teritorehs gived up",
+
+    "commands.rfx-cmd.getpoi.success.main": "%2$s iz %1$s",
+    "commands.rfx-cmd.getpoi.success.named": "%2$s iz shared teritoreh named %1$s",
+    "commands.rfx-cmd.getpoi.reduced.main": "%s iz!",
+    "commands.rfx-cmd.getpoi.reduced.named": "%s iz shared teritoreh!",
+    "commands.rfx-cmd.getpoi.not_found.main": "%s iznt :(",
+    "commands.rfx-cmd.getpoi.not_found.named": "%s iznt shared teritoreh",
+
+
+    "commands.rfx-cmd.poi.click_to_teleport": "Klik 2 haz magik komand",
+    "commands.rfx-cmd.poi.click_to_set": "ONO DIZ TERITOREH IZNT SHARED YET klik 2 share",
+    "commands.rfx-cmd.poi.main_poi": "COOLEST SHARED TERITOREH",
+    "commands.rfx-cmd.poi.main_poi.caps": "COOLEST SHARED TERITOREH",
+    "commands.rfx-cmd.poi.dimension": " in %s",
+
+
+
     "gamerule.allowHomeTp": "Kitteh can haz teritoreh",
     "gamerule.allowHomeTp.description": "allow kitteh 2 haz teritoreh wif komand liek /home and /sethome",
     "gamerule.maxHomes": "Maksimum teritoreh siez",
@@ -112,6 +160,20 @@
     "gamerule.tpaRequiresSameTeam.description": "set if kitteh can not haz tpa 2 enemey",
     "gamerule.maxNotes": "maksiumum secrutz",
     "gamerule.maxNotes.description": "Can kittehz haz more secrutz? No!",
+    "gamerule.deathTp": "Deth tp mode",
+    "gamerule.deathTp.description": "Set how kitteh can haz TP to their last deth pos\n - Nothx: Nothx\n - Komand: can haz /death komand, no deth findr needed\n - Deth findr: can haz clicky wif Deth findr v1.0\n - waddeveh: can haz deth findr and /death cuz idc",
+    "gamerule.deathTp.off": "Nothx",
+    "gamerule.deathTp.command": "Komand",
+    "gamerule.deathTp.compass": "Deth findr",
+    "gamerule.deathTp.both": "waddeveh",
+    "gamerule.allowPoi": "Kitteh can haz shared teritoreh",
+    "gamerule.allowPoi.description": "Kitteh can use magik komand for TPing to shared teritoreh",
+    "gamerule.allCanSetPoi": "All kitteh can share teritoreh",
+    "gamerule.allCanSetPoi.description": "All kittehs can add give up and move shared teritoreh, not just godkittehs",
+    "gamerule.hidePoiInfo": "Kitteh cant haz shared coords",
+    "gamerule.hidePoiInfo.description": "No kitteh can haz coords of shared teritoreh, only godkittehs",
+
+    "gamerule.category.rfx-cmd.main": "Samus Komandz",
 
     "message.rfx-cmd.not_synced": "Server haz no mod liek diz",
     "message.rfx-cmd.homes_not_allowed": "U can haz no teritoreh",

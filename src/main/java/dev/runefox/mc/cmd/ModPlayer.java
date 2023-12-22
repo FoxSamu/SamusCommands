@@ -14,6 +14,10 @@ public interface ModPlayer {
 
     ServerHandler net();
 
+    TeleportPos here();
+
+    boolean teleport(TeleportPos pos);
+
     void setHome(String name, TeleportPos pos);
     void setHome(String name);
     void setHome(TeleportPos pos);
@@ -77,6 +81,12 @@ public interface ModPlayer {
     List<String> clearNotes();
     int noteCount();
     List<String> notes();
+
+    TeleportPos lastDeath();
+    boolean teleportToLastDeathPos();
+
+    boolean teleportToPoi(String name);
+    boolean teleportToPoi();
 
     static ModPlayer get(ServerPlayer player) {
         return PlayerController.get(player);
