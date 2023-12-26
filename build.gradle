@@ -20,6 +20,8 @@ repositories {
 }
 
 loom {
+    accessWidenerPath = file("src/main/resources/rfx-cmd.accesswidener")
+
     splitEnvironmentSourceSets()
 
 	mods {
@@ -94,13 +96,13 @@ publishing {
 	}
 
 	repositories {
-		if ("shwMavenUser" in project.properties && "shwMavenPass" in project.properties) {
+        if ("rfxMavenUser" in project.properties && "rfxMavenPass" in project.properties) {
 			maven {
-				name = "ShwMaven"
+                name = "RfxMaven"
 				url = uri("https://maven.shadew.net/")
 				credentials {
-					username = project.properties.shwMavenUser
-					password = project.properties.shwMavenPass
+                    username = project.rfxMavenUser
+                    password = project.rfxMavenPass
 				}
 			}
 		}

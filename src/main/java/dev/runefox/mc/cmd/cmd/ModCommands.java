@@ -39,6 +39,8 @@ public class ModCommands {
         new DelPoiCommand("delpoi").register(dispatcher);
         new PoisCommand("pois").register(dispatcher);
         new ClearPoisCommand("clearpois").register(dispatcher);
+
+        new PregenCommand("pregen").register(dispatcher);
     }
 
     public static <T extends GameRules.Value<T>> Predicate<CommandSourceStack> requireGameRule(GameRules.Key<T> key, Predicate<T> pred) {

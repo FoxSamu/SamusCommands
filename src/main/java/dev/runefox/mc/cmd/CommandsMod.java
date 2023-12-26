@@ -4,8 +4,10 @@ import dev.runefox.mc.cmd.cmd.ModCommands;
 import dev.runefox.mc.cmd.net.ClientPingPacket;
 import dev.runefox.mc.cmd.net.Network;
 import dev.runefox.mc.cmd.poi.PoiManager;
+import dev.runefox.mc.cmd.pregen.Pregenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,5 +35,7 @@ public class CommandsMod implements ModInitializer {
 		CommandRegistrationCallback.EVENT.register((dispatcher, regs, environment) -> ModCommands.init(dispatcher));
 
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> Network.sendClient(handler.player, new ClientPingPacket()));
+
+        ServerTickEvents.END_WORLD_TICK.register(Pregenerator::tick);
 	}
 }

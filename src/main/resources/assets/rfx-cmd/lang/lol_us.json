@@ -132,12 +132,20 @@
     "commands.rfx-cmd.getpoi.not_found.main": "%s iznt :(",
     "commands.rfx-cmd.getpoi.not_found.named": "%s iznt shared teritoreh",
 
-
     "commands.rfx-cmd.poi.click_to_teleport": "Klik 2 haz magik komand",
     "commands.rfx-cmd.poi.click_to_set": "ONO DIZ TERITOREH IZNT SHARED YET klik 2 share",
     "commands.rfx-cmd.poi.main_poi": "COOLEST SHARED TERITOREH",
     "commands.rfx-cmd.poi.main_poi.caps": "COOLEST SHARED TERITOREH",
     "commands.rfx-cmd.poi.dimension": " in %s",
+
+    "commands.rfx-cmd.pregen.already_generating": "Dis world haz teh fancy world loader running alredy, only 1 can run",
+    "commands.rfx-cmd.pregen.not_generating": "Teh fancy world loader iz not running",
+    "commands.rfx-cmd.pregen.status": "Fancy loading %3$s chunks: %1$s dun, %2$s fail",
+    "commands.rfx-cmd.pregen.started": "Started fancy loading %s chunks",
+    "commands.rfx-cmd.pregen.stopping": "No more fancy loading kthx",
+    "commands.rfx-cmd.pregen.finished.all": "Dun fancy loading all %3$s chunks: %1$s dun, %2$s fail",
+    "commands.rfx-cmd.pregen.finished.some": "Dun fancy loading %1$s of %4$s chunks: %2$s dun, %3$s fail",
+
 
 
 

@@ -2,10 +2,7 @@
 	"required": true,
 	"package": "dev.runefox.mc.cmd.mixin",
 	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"PlayerMixin",
-		"ServerMixin"
-	],
+	"mixins": ["LevelMixin", "PlayerMixin", "ServerMixin"],
 	"injectors": {
 		"defaultRequire": 1
 	}

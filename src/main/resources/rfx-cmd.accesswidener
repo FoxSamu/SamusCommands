@@ -1,0 +1,4 @@
+accessWidener v1 named
+
+accessible method net/minecraft/server/level/ChunkMap getUpdatingChunkIfPresent (J)Lnet/minecraft/server/level/ChunkHolder;
+accessible method net/minecraft/server/level/ServerChunkCache tickChunks ()V

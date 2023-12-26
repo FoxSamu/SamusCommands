@@ -29,6 +29,7 @@
 			"environment": "client"
 		}
 	],
+    "accessWidener": "rfx-cmd.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.14.22",
 		"minecraft": "^1.20",

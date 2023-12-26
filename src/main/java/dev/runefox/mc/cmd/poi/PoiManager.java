@@ -62,6 +62,7 @@ public class PoiManager {
         Path path = storageSource.getLevelPath(LevelResource.ROOT).resolve("rfx-poi.dat");
         if (!Files.exists(path)) {
             CommandsMod.LOGGER.info("No POI data yet");
+            return;
         }
 
         try (DataInputStream dos = new DataInputStream(Files.newInputStream(path))) {

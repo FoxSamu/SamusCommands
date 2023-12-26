@@ -134,9 +134,17 @@
 
     "commands.rfx-cmd.poi.click_to_teleport": "Klik om te teleporteren.",
     "commands.rfx-cmd.poi.click_to_set": "Deze locatie bestaat niet. Klik om in te stellen.",
-    "commands.rfx-cmd.poi.main_home": "hoofdlocatie",
-    "commands.rfx-cmd.poi.main_home.caps": "Hoofdlocatie",
+    "commands.rfx-cmd.poi.main_poi": "hoofdlocatie",
+    "commands.rfx-cmd.poi.main_poi.caps": "Hoofdlocatie",
     "commands.rfx-cmd.poi.dimension": " in %s",
+
+    "commands.rfx-cmd.pregen.already_generating": "De pregenerator is al bezig in deze dimensie. Maar 1 instantie van de pregenerator kan bezig zijn.",
+    "commands.rfx-cmd.pregen.not_generating": "De pregenerator is niet bezig in deze dimensie.",
+    "commands.rfx-cmd.pregen.status": "Momenteel worden %3$s chunks gepregenereerd: %1$s klaar, %2$s mislukt.",
+    "commands.rfx-cmd.pregen.started": "Gestart met het pregenereren van %s chunks.",
+    "commands.rfx-cmd.pregen.stopping": "De pregenerator wordt gestopt.",
+    "commands.rfx-cmd.pregen.finished.all": "Klaar met het pregenereren van alle %3$s chunks: %1$s klaar, %2$s mislukt.",
+    "commands.rfx-cmd.pregen.finished.some": "Klaar met het pregenereren van %1$s van de %4$s chunks: %2$s klaar, %3$s mislukt.",
 
 
 

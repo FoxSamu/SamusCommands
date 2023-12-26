@@ -138,7 +138,13 @@
     "commands.rfx-cmd.poi.main_poi.caps": "Main Point of Interest",
     "commands.rfx-cmd.poi.dimension": " in %s",
 
-
+    "commands.rfx-cmd.pregen.already_generating": "The pregenerator is already running in this dimension. Only one pregeneration instance can run at a time.",
+    "commands.rfx-cmd.pregen.not_generating": "The pregenerator isn't running in this dimension.",
+    "commands.rfx-cmd.pregen.status": "Currently pregenerating %3$s chunks: %1$s done, %2$s failed.",
+    "commands.rfx-cmd.pregen.started": "Started pregenerating %s chunks.",
+    "commands.rfx-cmd.pregen.stopping": "Stopping the pregenerator.",
+    "commands.rfx-cmd.pregen.finished.all": "Finished pregenerating all %3$s chunks: %1$s done, %2$s failed.",
+    "commands.rfx-cmd.pregen.finished.some": "Finished pregenerating %1$s out of %4$s chunks: %2$s done, %3$s failed.",
 
 
 
