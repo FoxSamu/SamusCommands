@@ -172,6 +172,16 @@
     "gamerule.allCanSetPoi.description": "All kittehs can add give up and move shared teritoreh, not just godkittehs",
     "gamerule.hidePoiInfo": "Kitteh cant haz shared coords",
     "gamerule.hidePoiInfo.description": "No kitteh can haz coords of shared teritoreh, only godkittehs",
+    "gamerule.teleportPets": "TP frien animuls",
+    "gamerule.teleportPets.description": "Kitteh can haz TP for frien animuls \n - Nothx: Noh!\n - Dimenshun: in same dimenshun\n - Interdimenshun: fancy thru dimenshuns",
+    "gamerule.teleportPets.off": "Nothx",
+    "gamerule.teleportPets.dimension": "Dimenshun",
+    "gamerule.teleportPets.interdimensional": "Interdimenshun",
+    "gamerule.teleportLeashedMobs": "TP leashed animuls",
+    "gamerule.teleportLeashedMobs.description": "Kitteh can haz TP for leashed animuls \n - Nothx: Noh!\n - Dimenshun: in same dimenshun\n - Interdimenshun: fancy thru dimenshuns",
+    "gamerule.teleportLeashedMobs.off": "Nothx",
+    "gamerule.teleportLeashedMobs.dimension": "Dimenshun",
+    "gamerule.teleportLeashedMobs.interdimensional": "Interdimenshun",
 
     "gamerule.category.rfx-cmd.main": "Samus Komandz",
 

@@ -30,7 +30,7 @@ public class ModCommands {
         new NoteCommand("note").register(dispatcher);
         new NotesCommand("notes").register(dispatcher);
 
-        new DeathCommand("death").register(dispatcher);
+        new DeathCommand("death").alias("back").register(dispatcher);
 
         new PoiCommand("poi").register(dispatcher);
         new SetPoiCommand("setpoi").register(dispatcher);

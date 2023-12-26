@@ -2,6 +2,7 @@ package dev.runefox.mc.cmd;
 
 import com.mojang.authlib.GameProfile;
 import dev.runefox.mc.cmd.net.ServerHandler;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public interface ModPlayer {
 
     TeleportPos here();
 
+    boolean teleport(ResourceLocation level, double x, double y, double z, float yrot, float xrot);
     boolean teleport(TeleportPos pos);
 
     void setHome(String name, TeleportPos pos);

@@ -134,8 +134,8 @@
 
     "commands.rfx-cmd.poi.click_to_teleport": "Klik om te teleporteren.",
     "commands.rfx-cmd.poi.click_to_set": "Deze locatie bestaat niet. Klik om in te stellen.",
-    "commands.rfx-cmd.poi.main_home": "hoofdlocatie",
-    "commands.rfx-cmd.poi.main_home.caps": "Hoofdlocatie",
+    "commands.rfx-cmd.poi.main_poi": "hoofdlocatie",
+    "commands.rfx-cmd.poi.main_poi.caps": "Hoofdlocatie",
     "commands.rfx-cmd.poi.dimension": " in %s",
 
 
@@ -173,6 +173,16 @@
     "gamerule.allCanSetPoi.description": "Sta alle spelers toe om gedeelde locaties aan te passen, toe te voegen en te verwijderen. Wanneer uit, kunnen alleen admins dit doen.",
     "gamerule.hidePoiInfo": "Verberg locatie-info",
     "gamerule.hidePoiInfo.description": "Verberg alle informatie over gedeelde locaties van spelers. Wanneer aan, kunnen alleen admins de informatie over gedeelde locaties opvragen.",
+    "gamerule.teleportPets": "Teleporteer huisdieren",
+    "gamerule.teleportPets.description": "Stelt in dat huisdieren mee teleporteren met de speler. \n - Uit: Niet aan.\n - Dimensie: Aan maar alleen door dezelfde dimensie.\n - Interdimensionaal: Aan maar alleen door alle dimensies.",
+    "gamerule.teleportPets.off": "Uit",
+    "gamerule.teleportPets.dimension": "Dimensie",
+    "gamerule.teleportPets.interdimensional": "Interdimensionaal",
+    "gamerule.teleportLeashedMobs": "Teleporteer aangelijnde dieren",
+    "gamerule.teleportLeashedMobs.description": "Stelt in dat dieren aan een leidtouw mee teleporteren met de speler. \n - Uit: Niet aan.\n - Dimensie: Aan maar alleen door dezelfde dimensie.\n - Interdimensionaal: Aan maar alleen door alle dimensies.",
+    "gamerule.teleportLeashedMobs.off": "Uit",
+    "gamerule.teleportLeashedMobs.dimension": "Dimensie",
+    "gamerule.teleportLeashedMobs.interdimensional": "Interdimensionaal",
 
     "gamerule.category.rfx-cmd.main": "Samū's Commando's",
 

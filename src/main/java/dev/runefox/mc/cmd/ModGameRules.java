@@ -87,6 +87,20 @@ public class ModGameRules {
         GameRuleFactory.createBooleanRule(false, (server, value) -> resendCommands(server))
     );
 
+
+
+    public static final GameRules.Key<EnumRule<AnimalTeleportMode>> TELEPORT_PETS = GameRuleRegistry.register(
+        "teleportPets",
+        CATEGORY,
+        GameRuleFactory.createEnumRule(AnimalTeleportMode.dimension)
+    );
+
+    public static final GameRules.Key<EnumRule<AnimalTeleportMode>> TELEPORT_LEASHED_MOBS = GameRuleRegistry.register(
+        "teleportLeashedMobs",
+        CATEGORY,
+        GameRuleFactory.createEnumRule(AnimalTeleportMode.interdimensional)
+    );
+
     public static void init() {
     }
 

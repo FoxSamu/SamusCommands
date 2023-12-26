@@ -173,6 +173,16 @@
     "gamerule.allCanSetPoi.description": "Allows all players to configure shared points of interest. If disabled, only admins can set POIs.",
     "gamerule.hidePoiInfo": "Hide POI info",
     "gamerule.hidePoiInfo.description": "Hides POI info from players. If enabled, only admins can retrieve POI info.",
+    "gamerule.teleportPets": "Teleport pets",
+    "gamerule.teleportPets.description": "Sets whether pets teleport with the player whenever the player teleports. \n - Off: Not enabled.\n - Dimension: Enabled only in the same dimension.\n - Interdimensional: Enabled through dimensions.",
+    "gamerule.teleportPets.off": "Off",
+    "gamerule.teleportPets.dimension": "Dimension",
+    "gamerule.teleportPets.interdimensional": "Interdimensional",
+    "gamerule.teleportLeashedMobs": "Teleport leashed mobs",
+    "gamerule.teleportLeashedMobs.description": "Sets whether leashed mobs teleport with the player whenever the player teleports. \n - Off: Not enabled.\n - Dimension: Enabled only in the same dimension.\n - Interdimensional: Enabled through dimensions.",
+    "gamerule.teleportLeashedMobs.off": "Off",
+    "gamerule.teleportLeashedMobs.dimension": "Dimension",
+    "gamerule.teleportLeashedMobs.interdimensional": "Interdimensional",
 
     "gamerule.category.rfx-cmd.main": "Samū's Commands",
 

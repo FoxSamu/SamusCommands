@@ -80,16 +80,20 @@ public class PlayerController implements ModPlayer {
     }
 
     @Override
-    public boolean teleport(TeleportPos pos) {
+    public boolean teleport(ResourceLocation dimen, double x, double y, double z, float yrot, float xrot) {
         MinecraftServer server = player.getServer();
-        ServerLevel level = server.getLevel(ResourceKey.create(Registries.DIMENSION, pos.dimension()));
+        ServerLevel level = server.getLevel(ResourceKey.create(Registries.DIMENSION, dimen));
         if (level == null)
             return false;
 
-        BlockPos bpos = pos.pos();
-
-        player.teleportTo(level, bpos.getX() + 0.5, bpos.getY(), bpos.getZ() + 0.5, pos.yrot(), pos.xrot());
+        Teleporter teleporter = new Teleporter(player, level, x, y, z, yrot, xrot);
+        teleporter.teleport();
         return true;
+    }
+
+    @Override
+    public boolean teleport(TeleportPos pos) {
+        return teleport(pos.dimension(), pos.pos().getX() + 0.5, pos.pos().getY(), pos.pos().getZ() + 0.5, pos.yrot(), pos.xrot());
     }
 
     @Override
@@ -184,7 +188,7 @@ public class PlayerController implements ModPlayer {
         BlockPos pos = level.getSharedSpawnPos();
         float angle = level.getSharedSpawnAngle();
 
-        player.teleportTo(level, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, angle, player.getXRot());
+        teleport(new TeleportPos(pos, level.dimension().location(), angle, player.getXRot()));
     }
 
     private boolean tpRequestReceived(TeleportRequest request) {
@@ -299,7 +303,8 @@ public class PlayerController implements ModPlayer {
         float yr = target.getYRot();
         float xr = target.getXRot();
 
-        source.teleportTo(lev, x, y, z, yr, xr);
+        ModPlayer smp = ModPlayer.get(source);
+        smp.teleport(lev.dimension().location(), x, y, z, yr, xr);
     }
 
     private TeleportRequest lastRequest() {
